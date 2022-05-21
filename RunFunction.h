@@ -36,7 +36,7 @@ void close();//Frees media and shuts down SDL
 bool CheckCollision(const int &KT , const int &x,const int &y, const int &z, const int &t )
 {
 
-    int left_a = x;
+  int left_a = x;
   int right_a  ;
   int top_a = y;
   int bottom_a  ;
@@ -54,8 +54,8 @@ bool CheckCollision(const int &KT , const int &x,const int &y, const int &z, con
     }
     else if(KT == 1)// bullet player and threat
     {
-        right_a = x +WIDTH_SPHERE ;
-        bottom_a = y+HEIGHT_SPHERE ;
+        right_a = x + WIDTH_SPHERE ;
+        bottom_a = y + HEIGHT_SPHERE ;
         right_b = z + WIDTH_AIRCRAFT-10;
         bottom_b = t + HEIGHT_AIRCRAFT;
     }
@@ -228,7 +228,7 @@ bool loadMedia()
 		success = false;
     }
 
-	if(!gItemMenu[0].loadFromFile("Play.jpg")||!gItemMenu[1].loadFromFile("Again.jpg")||!gItemMenu[2].loadFromFile("Exit.jpg"))
+	if(!gItemMenu[0].loadFromFile("Play.jpg")||!gItemMenu[1].loadFromFile("Again.jpg")||!gItemMenu[2].loadFromFile("Exit.jpg")||!gItemMenu[3].loadFromFile("TTR.jpg"))
     {
         printf("Failed to load button menu texture!\n");
         success = false;
@@ -263,7 +263,7 @@ bool loadMedia()
 		gBoomClip[ 0 ].h = 90;
 
 		gBoomClip[ 1 ].x = 100;
-		gBoomClip[ 1 ].y =   20;
+		gBoomClip[ 1 ].y = 20;
 		gBoomClip[ 1 ].w = 100;
 		gBoomClip[ 1 ].h = 90;
 
@@ -288,12 +288,12 @@ bool loadMedia()
 		gBoomClip[ 5 ].h = 90;
 
 		gBoomClip[ 6 ].x = 210;
-		gBoomClip[ 6 ].y =   150;
+		gBoomClip[ 6 ].y = 150;
 		gBoomClip[ 6 ].w = 100;
 		gBoomClip[ 6 ].h = 90;
 
 		gBoomClip[ 7 ].x = 315;
-		gBoomClip[ 7 ].y =   150;
+		gBoomClip[ 7 ].y = 150;
 		gBoomClip[ 7 ].w = 100;
 		gBoomClip[ 7 ].h = 90;
 
@@ -313,7 +313,7 @@ bool loadMedia()
 
 
     //Open the font
-	gFont = TTF_OpenFont( "BodoniFLF-Bold.ttf", 20 );
+	gFont = TTF_OpenFont( "gameFonts.ttf", 35 );
 	if( gFont == NULL )
 	{
 		printf( "Failed to load lazy font! SDL_ttf Error: %s\n", TTF_GetError() );

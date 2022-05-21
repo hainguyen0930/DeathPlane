@@ -253,12 +253,12 @@ int main( int argc, char* args[] )
                                     if(Player_Die < PLAYERPOWER)
                                     {
                                         SDL_Delay(1000);
-                                        x= SCREEN_WIDTH/2-50;
-                                        y = SCREEN_HEIGHT-100;
+
                                     }
                                     else
                                     {
                                         quit = true;
+
                                     }
                                 }//bul_col
                             }//for bul_col
@@ -273,10 +273,6 @@ int main( int argc, char* args[] )
                 }// while quit
 
                 gMenu.loadOutroGame(e);
-                string TextScore =  "PRESS E TO OPEN THE TUTORIAL" ;
-                gText.loadFromRenderedText(TextScore.c_str(), textColor1);
-                gText.render(200,650);
-                SDL_RenderPresent(gRenderer);
 
                 if(gMenu.getis_Play())
                 {
